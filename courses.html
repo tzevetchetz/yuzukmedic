@@ -485,7 +485,7 @@
         const endDate = parseDate(course.endDate);
         const hebrewStart = await getHebrewDateStr(startDate);
         const hebrewEnd = await getHebrewDateStr(endDate);
-        const imagePath = imagePool[imageIndex++] || "images/default.jpg";
+        const imagePath = (imagePool[imageIndex++] || "images/default.jpg") + "?v=" + new Date().getTime();
 
         const div = document.createElement('div');
         div.className = 'course';
@@ -534,6 +534,7 @@
   nl_contact = "n:יוזוק מדיק|p:0533562608";
 </script>
 <script src="https://yuzok101.github.io/yuzukmedic/data/nagishli.js" charset="utf-8" defer></script>
+
 
 
 
